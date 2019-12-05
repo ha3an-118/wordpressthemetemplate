@@ -14,6 +14,8 @@ if( !class_exists( "themename" ) ){
 
             // enqueue the files
             $this->enqueue = new ThemenameEnqueueFile();
+            $this->functions = new ThemenameHelperFunctions();
+            $this->options = new ThemenameOptions();
             
             
             // theme options
@@ -54,6 +56,10 @@ if( !class_exists( "themename" ) ){
             require_once(BASE_DIR.'/vendor/autoload.php');
             // include the file neaded
             require_once(BASE_DIR.'/includes/class-themename-enqueue-file.php');
+            // the class that containe the function we need in theme
+            require_once(BASE_DIR.'/includes/class-themename-helper-functions.php');
+            // the class that handel the option get set and update
+            require_once(BASE_DIR.'/includes/class-themname-options.php');
             
             
             // admin part
